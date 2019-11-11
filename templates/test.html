@@ -30,7 +30,7 @@
 
   // šī funkcija saņem 2 parametrus - objektu o un funkciju fnKadTabulaDabuta, kura būs jāpilda, kad serveris atbildēs
   function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
-    var urla = new URL("https://alynxserver.heroku.om/api/rezultati"); //URL tipa objekts, tam jānorāda, kurš Python route serverī būs jāpilda. 
+    var urla = new URL("https://alynxserver.herokuapp.com//api/rezultati"); //URL tipa objekts, tam jānorāda, kurš Python route serverī būs jāpilda. 
     // Cikls, izmantojot lambdas, kurš pieliek URL objektam katru līdzi iedotā objekta o lauku
     // var arī bez cikla 2 append komandas, bet māte Google piedāvāja šādu piemēru
     Object.keys(o).forEach(key => urla.searchParams.append(key,o[key]));
