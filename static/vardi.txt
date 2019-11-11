@@ -1,1 +1,0 @@
-[{"vards": "SIERS", "punkti": 12}, {"vards": "MIEGS", "punkti": 10}, {"vards": "SLAVA", "punkti": 7}, {"vards": "RINDA", "punkti": 3}, {"vards": "KALNS", "punkti": 4}, {"vards": "aaa", "punkti": 60}, {"vards": "AAA", "punkti": 60}, {"vards": "Kurmis", "punkti": 60}, {"vards": "bebrs", "punkti": 0}, {"vards": "Bebras", "punkti": 41}, {"vards": "HHHH", "punkti": 19}]
