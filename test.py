@@ -25,5 +25,6 @@ def rez():
     }
     return json.dumps(response)
 
+app.run()
 
 
