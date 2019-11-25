@@ -1,6 +1,6 @@
 #from app import app
 from flask import Flask, request, render_template
-import JSON
+import json
 app = Flask(__name__)
 # Uzstada test.html ka nokluseto web lapas sākumu.
 @app.route('/')
