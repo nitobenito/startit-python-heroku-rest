@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import json
 # šī rinda laikam palaiž mūsu kodu kā flask api
 app = Flask(__name__)
-
+print("esam serveri")
 # Uzstada test.html ka nokluseto web lapas sākumu.
 @app.route('/')
 def root():
@@ -26,5 +26,5 @@ def rez():
     }
     return json.dumps(response)
 
-app.run()
+app.run(port=5000)
 
