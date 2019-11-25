@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 </head>
-<body id="spele" onload="pieskaitaPunktu();">
 <script
  type="text/javascript"
  src="{{ url_for('static', filename='js/main.js') }}"
 ></script>
-</body>
+<body id="spele">
+  {% block spele %} {% endblock %}
+ </body>
 </html>
