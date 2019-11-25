@@ -1,9 +1,6 @@
 #from app import app
 from flask import Flask, request, render_template
-import json
-# šī rinda laikam palaiž mūsu kodu kā flask api
 app = Flask(__name__)
-print("esam serveri")
 # Uzstada test.html ka nokluseto web lapas sākumu.
 @app.route('/')
 def root():
@@ -25,6 +22,7 @@ def rez():
         'rezultati': sorted(saraksts,key=lambda vi: vi["punkti"])
     }
     return json.dumps(response)
+#dīvaini, bet iekš Heroku šis if bija izšķirošais lai sāktu strādāt
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000)
