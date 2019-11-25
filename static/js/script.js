@@ -17,7 +17,7 @@ function pieskaitaPunktu() {
   }
 
   function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
-    var urla = new URL("https://alynxserver.herokuapp.com:5000/api/rezultati");  
+    var urla = new URL("https://alynxserver.herokuapp.com/api/rezultati");  
     Object.keys(o).forEach(key => urla.searchParams.append(key,o[key]));
     fetch(new Request(urla))
       .then((resp)=>resp.json())
