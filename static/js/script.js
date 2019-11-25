@@ -1,5 +1,5 @@
-window.onload=pieskaitaPunktu();
 let laiks = Math.floor(Math.random()*61); 
+window.onload=pieskaitaPunktu();
 function pieskaitaPunktu() {
     let vards=prompt("Ievadi savu vardu!");
     let s={"vards":vards,"punkti":laiks};
@@ -17,7 +17,7 @@ function pieskaitaPunktu() {
   }
 
   function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
-    var urla = new URL("https://lynxserver.herokuapp.com:5000/api/rezultati");  
+    var urla = new URL("https://alynxserver.herokuapp.com:5000/api/rezultati");  
     Object.keys(o).forEach(key => urla.searchParams.append(key,o[key]));
     fetch(new Request(urla))
       .then((resp)=>resp.json())
