@@ -13,12 +13,12 @@ def root():
 def rez():
     vards=request.args.get("vards")
     punkti=request.args.get("punkti")
-    f=open('vardi.txt','r')
+    f=open('app/vardi.txt','r')
     saraksts=json.load(f)
     f.close()
     jauns={"vards":vards,"punkti":int(punkti)}
     saraksts.append(jauns)
-    f=open('vardi.txt','w')
+    f=open('app/vardi.txt','w')
     json.dump(saraksts,f)
     f.close()
     response = {
