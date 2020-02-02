@@ -25,13 +25,7 @@ def rez():
     return json.dumps(response)
 @app.route('/api/rezultati', methods=['POST'])
 def suutiit_zinju():
-    vards=request.args.put("vards")
-    punkti=request.args.put("punkti")
-    response = {
-        'vards':'Feb03',
-        'punkti':'111'
-    }
-    return json.dumps(response)
+    return "jjjjj"
 #dīvaini, bet iekš Heroku šis if bija izšķirošais lai sāktu strādāt
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
