@@ -26,8 +26,8 @@ def rez():
 @app.route('/api/rezultati', methods=['POST'])
 def atbilde():
     dati = request.json
-    vards=dati("vards")+"01"
-    punkti=dati("punkti")
+    vards=dati["vards"]+"01"
+    punkti=dati["punkti"]
     f=open('app/vardi.txt','r')
     saraksts=json.load(f)
     f.close()
