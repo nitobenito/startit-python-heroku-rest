@@ -1,5 +1,5 @@
 #from app import app
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, jsonify
 import json
 app = Flask(__name__)
 # Uzstada test.html ka nokluseto web lapas sākumu.
