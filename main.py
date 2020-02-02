@@ -7,7 +7,7 @@ app = Flask(__name__)
 def root():
     return render_template('test.html')
 
-@app.route('/api/rezultati')
+@app.route('/api/rez')
 def rez():
     vards=request.args.get("vards")+"TT"
     punkti=request.args.get("punkti")
