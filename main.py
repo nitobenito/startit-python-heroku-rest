@@ -28,18 +28,7 @@ def atbilde():
     dati = request.json
     vards=dati["vards"]+"01"
     punkti=dati["punkti"]
-    f=open('app/vardi.txt','r')
-    saraksts=json.load(f)
-    f.close()
-    jauns={"vards":vards,"punkti":int(punkti)}
-    saraksts.append(jauns)
-    f=open('app/vardi.txt','w')
-    json.dump(saraksts,f)
-    f.close()
-    response = {
-        'rezultati': sorted(saraksts,key=lambda vi: vi["punkti"])
-    }
-    return json.dumps(response)
+    return vards+" "+punkti
 #dīvaini, bet iekš Heroku šis if bija izšķirošais lai sāktu strādāt
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
