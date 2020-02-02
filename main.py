@@ -1,6 +1,5 @@
 #from app import app
-from flask import Flask, request, render_template, jsonify
-import json
+from flask import Flask, request, render_template, jsonify, json
 app = Flask(__name__)
 # Uzstada test.html ka nokluseto web lapas sākumu.
 @app.route('/')
@@ -25,7 +24,8 @@ def rez():
     return json.dumps(response)
 @app.route('/api/rezultati', methods=['POST'])
 def atbilde():
-    return "atbild"
+    let s=request.json
+    return s["vards"]
 #dīvaini, bet iekš Heroku šis if bija izšķirošais lai sāktu strādāt
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
