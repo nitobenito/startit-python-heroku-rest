@@ -27,13 +27,14 @@ function pieskaitaPunktu() {
      });
   }
  function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
+   console.log(JSON.stringify(o));
    const url = 'https://alynxserver.herokuapp.com/api/rezultati';
    var request = new Request(url, {
    method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(o)
+        body: JSON.stringify(o);
 });
     fetch(request)
       .then((resp)=>resp.json())
