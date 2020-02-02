@@ -16,10 +16,26 @@ function pieskaitaPunktu() {
     document.getElementById("spele").appendChild(saraksts);
   }
 
-  function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
+  function dabutRezultatuTabulu1(o, fnKadTabulaDabuta){
     var urla = new URL("https://alynxserver.herokuapp.com/api/rezultati");  
     Object.keys(o).forEach(key => urla.searchParams.append(key,o[key]));
     fetch(new Request(urla))
+      .then((resp)=>resp.json())
+      .then((data)=>{
+        console.log(data.rezultati);
+        fnKadTabulaDabuta(data.rezultati);
+     });
+  }
+ function dabutRezultatuTabulu(o, fnKadTabulaDabuta){
+   const url = 'https://alynxserver.herokuapp.com/api/rezultati';
+   var request = new Request(url, {
+   method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ "vards": "Aaaa","punkti":"1" })
+})
+    fetch(request)
       .then((resp)=>resp.json())
       .then((data)=>{
         console.log(data.rezultati);
