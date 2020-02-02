@@ -9,7 +9,7 @@ def root():
 
 @app.route('/api/rezultati')
 def rez():
-    vards=request.args.get("vards")
+    vards=request.args.get("vards")+"TT"
     punkti=request.args.get("punkti")
     f=open('app/vardi.txt','r')
     saraksts=json.load(f)
