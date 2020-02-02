@@ -8,7 +8,7 @@ def root():
 
 @app.route('/api/rez')
 def rez():
-    vards=request.args.get("vards")+"TT"
+    vards=request.args.get("vards")
     punkti=request.args.get("punkti")
     f=open('app/vardi.txt','r')
     saraksts=json.load(f)
@@ -25,8 +25,8 @@ def rez():
 @app.route('/api/rezultati', methods=['POST'])
 def atbilde():
     data = request.get_json()
-    vards = data.get('vards', '')
-    punkti  = data.get('punkti', '')
+    vards = data.get('vards')
+    punkti  = data.get('punkti')
     f=open('app/vardi.txt','r')
     saraksts=json.load(f)
     f.close()
