@@ -3,7 +3,20 @@ window.onload=pieskaitaPunktu();
 function pieskaitaPunktu() {
     let vards=prompt("Ievadi savu vardu!");
     let s={"vards":vards,"punkti":laiks};
-    dabutRezultatuTabulu(s, paraditRezultatuTabulu); 
+    const url = 'https://alynxserver.herokuapp.com/api/rezultati';
+    let request = new Request(url, {
+    method: 'POST',
+    headers: {
+       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(o)
+    });
+    fetch(request)
+      .then((resp)=>resp.json())
+      .then((data)=>{
+        console.log(data.rezultati);
+        paraditRezultatuTabulu(data.rezultati);
+     });; 
   }
 
   function paraditRezultatuTabulu(rez){
