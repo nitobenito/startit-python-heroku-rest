@@ -24,7 +24,7 @@ def rez():
     return json.dumps(response)
 @app.route('/api/rezultati', methods=['POST'])
 def atbilde():
-    vards=request.args.get("vards")+"TT"
+    vards=request.data("vards")+"00"
     return vards
 #dīvaini, bet iekš Heroku šis if bija izšķirošais lai sāktu strādāt
 if __name__ == '__main__':
