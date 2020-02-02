@@ -27,12 +27,12 @@ def atbilde():
     data=request.json
     vards=data["vards"]
     punkti=data["punkti"]
-    f=open('app/vardi.txt','r')
+    f=open('vardi.txt','r')
     saraksts=json.load(f)
     f.close()
     jauns={"vards":vards,"punkti":int(punkti)}
     saraksts.append(jauns)
-    f=open('app/vardi.txt','w')
+    f=open('vardi.txt','w')
     json.dump(saraksts,f)
     f.close()
     response = {
