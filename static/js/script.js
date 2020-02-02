@@ -33,8 +33,8 @@ function pieskaitaPunktu() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ "vards": "Aaaa","punkti":"1" })
-})
+        body: JSON.stringify({ vards: "Aaaa",punkti:100 })
+});
     fetch(request)
       .then((resp)=>resp.json())
       .then((data)=>{
